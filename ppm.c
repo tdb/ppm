@@ -539,8 +539,9 @@ check_password(char *pPasswd, char **ppErrStr, Entry * pEntry)
                        pEntry->e_name.bv_val);
                 mem_len = realloc_error_message(&szErrStr, mem_len,
                                         strlen(PASSWORD_CRACKLIB) +
-                                        strlen(pEntry->e_name.bv_val));
-                sprintf(szErrStr, PASSWORD_CRACKLIB, pEntry->e_name.bv_val);
+                                        strlen(pEntry->e_name.bv_val) +
+                                        strlen(res));
+                sprintf(szErrStr, PASSWORD_CRACKLIB, pEntry->e_name.bv_val, res);
                 goto fail;
         
         }

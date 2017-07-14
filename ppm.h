@@ -53,7 +53,7 @@
 #define GENERIC_ERROR \
   "Error while checking password"
 #define PASSWORD_CRACKLIB \
-  "Password for dn=\"%s\" is too weak"
+  "Password for dn=\"%s\" is too weak: %s"
 #define BAD_PASSWORD_SZ \
   "Bad password for dn=\"%s\" because %s"
 
